@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Fetch!</title>
+  <!-- <documentation at http://demos.jquerymobile.com/1.4.1/ > -->
+
+    <link rel="stylesheet" href="/stylesheets/themes/theme2.min.css" />
+    <link rel="stylesheet" href="/stylesheets/themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    
+    <script src="/javascripts/index.js"></script>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/index.css">
+  
+</head>
+
+<body>
+
+  <!-- Home page ------------------------------------------------------------------>
+  <div data-role="page" id="home">
+    
+    <!--   page header -->
+    <div class="header" data-role="header" data-theme='a'>
+      <h1>Welcome to Fetch!</h1>
+      <div data-role="navbar" data-theme='B'>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#AddWalker">Add Walker</a></li>
+          <li><a href="#ListAll">List Dog Walkers</a></li>
+        </ul>
+      </div><!-- /navbar -->
+      <div>
+        <img class="center" src="/images/dogwalker.jpg" alt="DogWalker" style="width: 400px; height: 350px;">
+
+      </div>
+      <div class="myHeader">The website devoted to recording your dog walkers</div>
+      </div>
+
+    <!--   page content -->
+    <div data-role="content" data-theme='a'>
+      <div class="newFont">
+      
+        <p>To begin simply go to the Add Walker tab and input your dog walkers information.</p>
+        <p>If you would like to see your list of dog walkers simply click on the List Dog Walkers tab.</p>
+      
+      </div>
+    </div>
+
+    <!--  page footer -->
+    <div data-role="footer" data-theme='a'>
+      <h1>Copyright 2021 by Rylan Portmanteau</h1>
+    </div>
+  </div>
+  <!-- End of Home page ------------------------------------------------------------------>
+
+
+
+
+
+  <!-- Add a Walker Page - Dylan ------------------>
+  <div data-role="page" id="AddWalker">
+    <!--  page header -->
+    <div class="header" data-role="header" data-theme='a'>
+      <h1>Add a Walker</h1>
+      <div data-role="navbar" data-theme='B'>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#AddWalker">Add Walker</a></li>
+          <li><a href="#ListAll">List Dog Walkers</a></li>
+        </ul>
+      </div><!-- /navbar -->
+      <div class="myHeader">The website devoted to recording your dog walkers.</div>
+    </div>
+
+
+
+
+    <!-- page content -->
+
+    <div data-role="content" data-theme='a'>
+      <h2>Enter Dog Walker Information</h2>
+      First Name <br />
+      <input type="text" value="" id="fname" />
+      Last Name <br />
+      <input type="text" value="" id="lname" />
+      Email <br />
+      <input type="email" value="" id="email" />
+      Phone <br />
+      <input type="text" value="" id="phone" />
+      Experience? <br />
+      <input type="text" value="" id="experience" />
+      
+      Days available <br />
+      <form id="daysForm">
+        <br>
+        <input type="checkbox" id="monday" name="monday" value="Monday">
+        <label for="monday">Monday</label><br>
+        <input type="checkbox" id="tuesday" name="tuesday" value="Tuesday">
+        <label for="tuesday">Tuesday</label><br>
+        <input type="checkbox" id="wednesday" name="wednesday" value="Wednesday">
+        <label for="wednesday">Wednesday</label><br>
+        <input type="checkbox" id="thursday" name="thursday" value="Thursday">
+        <label for="thursday">Thursday</label><br>
+        <input type="checkbox" id="friday" name="friday" value="Friday">
+        <label for="friday">Friday</label><br>
+        <input type="checkbox" id="saturday" name="saturday" value="Saturday">
+        <label for="saturday">Saturday</label><br>
+        <input type="checkbox" id="sunday" name="sunday" value="Sunday">
+        <label for="sunday">Sunday</label><br>
+      </form>
+
+      <!-- Buttons don't work yet ------>
+      <input type="button" value="Add Walker" id="buttonAdd" data-inline="true" />
+      <input type="button" value="Clear" id="buttonClear" data-inline="true" />
+    </div>
+
+
+
+    <!--   page footer -->
+    <div data-role="footer" data-theme='a'>
+      <h1>Copyright 2021 by Rylan Portmanteau</h1>
+    </div>
+  </div>
+  <!-- End of Add a Walker page - Dylan ------------------------------------------------------------------>
+
+
+
+  <!-- List My Walkers Page ------------------->
+  <div data-role="page" id="ListAll">
+    <!--   page header -->
+    <div class="header" data-role="header" data-theme='a'>
+      <h1>Dog Walkers</h1>
+      <div data-role="navbar" data-theme='B'>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#AddWalker">Add Walker</a></li>
+          <li><a href="#ListAll">List Dog Walkers</a></li>
+        </ul>
+      </div><!-- /navbar -->
+      <div class="myHeader">Your site to organize your favorite dog walkers.</div>
+      </div>
+
+    <!--   page content -->
+    <div data-role="content" data-theme='a'>
+      <h2> Here are my dog walkers</h2>
+      <div id="divWalkerList"></div>
+      <h2>To view contact information click on the dog walkers name</h2>
+      </div>
+
+
+    <!--   page footer -->
+    <div data-role="footer" data-theme='a'>
+      <h1>Copyright 2021 by Rylan Portmanteau</h1>
+    </div>
+  </div>
+  </div>
+  <!-- End of List My Walkers page ------------------------------------------------------------------>
+
+
+  <!-- Start of WalkerInformation page - Dylan -->
+  <div data-role="page" id="WalkerInformation">
+
+    <!--   page header -->
+    <div class="header" data-role="header" data-theme='a'>
+      <h1>My Walkers</h1>
+      <div data-role="navbar" data-theme='B'>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#AddWalker">Add Walker</a></li>
+          <li><a href="#ListAll">List Dog Walkers</a></li>
+        </ul>
+      </div><!-- /navbar -->
+      <div class="myHeader">The website devoted to recording your dog walkers.</div>
+    </div>
+
+    <!--  content -->
+    <div data-role="content" data-theme='a'>
+      <p>Dog Walker Information:</p>
+      <br>
+      <p id="oneName"></p>
+      <p id="oneEmail"></p>
+      <p id="onePhone"></p>
+      <p id="oneExperience"></p>
+      <p id="oneDays"></p>
+    </div>
+    <input type="button" value="Delete" id="delete" style="background: rgb(216, 11, 11)" />
+
+
+
+    <!--    footer -->
+    <div data-role="footer" data-theme='a'>
+      <h1>Copyright 2021 by Rylan Portmanteau</h1>
+    </div>
+
+  </div>
+  <!-- End of WalkerInformation page ---------->
+
+  <p id="IDparmHere" hidden>change1</p>  <!--hidden, a place to stash the user ID -->
+</body>
+
+</html>
