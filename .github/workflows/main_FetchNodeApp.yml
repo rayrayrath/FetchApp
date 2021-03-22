@@ -32,5 +32,5 @@ jobs:
       with:
         app-name: 'FetchNodeApp'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_1fe79a70dad142088da2f5cb0f053d3a }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_7856c4ebe8c44dbe973b346f141aacab }}
         package: .
